@@ -1,0 +1,126 @@
+:root {
+    --bg-color: #fafafa;
+    --black: #000000;
+
+  
+    --marginDesktop: 1vw;
+  }
+  
+  @font-face {
+    font-family: 'Helvetica-Neue';
+    src: url('data/font/HelveticaNeue.ttc') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica-Neue-Medium';
+    src: url('data/font/HelveticaNeue.ttc') format('truetype');
+    font-weight: 500;
+    font-style: medium;
+}
+
+
+@font-face {
+    font-family: 'Helvetica-Neue-Bold';
+    src: url('data/font/HelveticaNeue.ttc') format('truetype');
+    font-weight: 600;
+    font-style: bold;
+}
+
+
+/*Geral*/
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--black);
+}
+
+h1{
+    font-size: 17px;
+    
+}
+
+p{
+    font-family: 'Helvetica-Neue', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.bold{
+    font-family: 'Helvetica-Neue-Bold', sans-serif;
+    font-weight: 600;
+    font-weight: bold;
+}
+
+.medium{
+    font-family: 'Helvetica-Neue-Medium', sans-serif;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: calc(var(--marginDesktop));
+}
+
+
+/*Header*/
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 var(--marginDesktop);
+    position: absolute;
+    top:0;
+    width: calc(100vw - var(--marginDesktop)* 2);
+}
+
+
+/*Index*/
+.mainIndex{
+    height: calc(var(--vh, 1h)* 100);
+}
+
+.background-index img{
+    width: 100vw;
+    height: calc(var(--vh, 1h)* 100);
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+
+.background-index svg{
+    width: 100vw;
+    height: calc(var(--vh, 1h)* 100);
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+/*Footer*/
+footer p .bold{
+    font-weight: 300;
+}
+
+footer p{
+    line-height: 20px;
+}
+
+footer div:first-child{
+    grid-column: 2 / span 2;
+}
+
+footer div{
+    grid-column: span 2;
+    margin: calc(var(--marginDesktop) * 2) 0;
+}
+
+footer h1{
+    margin-bottom: 1rem;
+}
