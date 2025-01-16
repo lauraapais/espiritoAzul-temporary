@@ -100,7 +100,7 @@ header {
     height: calc(var(--vh, 1h)* 100);
     position: absolute;
     top: 0;
-    z-index: -1;
+    z-index: 1;
 }
 
 /*Footer*/
