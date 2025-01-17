@@ -80,9 +80,13 @@ header {
     width: calc(100vw - var(--marginDesktop)* 2);
 }
 
-.headerFlag svg{
+
+
+.headerFlag svg {
     width: 4.5vw;
     height: auto;
+    margin: 0; 
+    padding: 0; 
 }
 
 
