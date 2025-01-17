@@ -93,20 +93,24 @@ header {
 
 .background-index img {
     width: 100vw;
-    height: calc(var(--vh, 1h)* 100);
+    height: calc(var(--vh, 1h) * 100);
     object-fit: cover;
     position: absolute;
     top: 0;
     z-index: -1;
 }
 
+.backgroundsvg-index svg {
+    width: auto;
+    height: calc(var(--vh, 1h) * 90);
 
-.background-index svg {
-    width: 100vw;
-    height: calc(var(--vh, 1h)* 100);
-    position: absolute;
-    top: 0;
-    z-index: 1;
+}
+
+.backgroundsvg-index {
+    display: flex;
+        width: 100vw;
+        height: calc(var(--vh, 1h)* 100);
+        justify-content: center;
 }
 
 /*Footer*/
@@ -147,6 +151,22 @@ footer h1 {
     /*Header*/
     .headerFlag svg{
         width: 13vw;
+    }
+
+    /*Index*/
+    .backgroundsvg-index svg{
+        position: initial;
+        height:50vh
+
+    }
+
+
+    .backgroundsvg-index {
+        display: flex;
+        width: 100vw;
+        height: calc(var(--vh, 1h)* 100);
+        justify-content: center;
+        flex-direction: column;
     }
 
     /*Footer*/
