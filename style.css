@@ -78,10 +78,11 @@ p {
 header {
     display: flex;
     justify-content: space-between;
+    width: calc(100vw - var(--marginDesktop)* 2);
     margin: 0 var(--marginDesktop);
     position: absolute;
     top: 0;
-    width: calc(100vw - var(--marginDesktop)* 2);
+    z-index: 2;
 }
 
 .headerFlag{
