@@ -80,8 +80,6 @@ header {
     width: calc(100vw - var(--marginDesktop)* 2);
 }
 
-
-
 .headerFlag svg {
     width: 4.5vw;
     height: auto;
@@ -102,6 +100,10 @@ header {
     position: absolute;
     top: 0;
     z-index: -1;
+}
+
+.gapIndex{
+    width:10vw;
 }
 
 .backgroundsvg-index svg {
@@ -164,7 +166,10 @@ footer h1 {
 
     }
 
-
+    .gapIndex{
+        display: none;
+    }
+    
     .backgroundsvg-index {
         display: flex;
         width: 100vw;
