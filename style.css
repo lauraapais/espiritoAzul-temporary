@@ -68,6 +68,9 @@ p {
     grid-template-columns: repeat(12, 1fr);
     grid-gap: calc(var(--marginDesktop));
 }
+.desktopNone{
+    display: none;
+}
 
 
 /*Header*/
@@ -168,6 +171,10 @@ footer h1 {
         grid-gap: calc(var(--marginDesktop));
     }
 
+    .desktopNone{
+        display: block;
+    }
+
     /*Header*/
     .headerFlag svg{
         width: 13vw;
@@ -204,6 +211,11 @@ footer h1 {
 
     footer h1 {
         margin-bottom: 1rem;
+    }
+
+    .hrFooter{
+        grid-column: span 6;
+        margin: 0 calc(var(--marginMobile));
     }
 
 }
