@@ -2,11 +2,12 @@
     --bg-color: #fafafa;
     --black: #000000;
 
-  
+
     --marginDesktop: 1vw;
-  }
-  
-  @font-face {
+    --marginMobile: 4vw;
+}
+
+@font-face {
     font-family: 'Helvetica-Neue';
     src: url('data/font/HelveticaNeue.ttc') format('truetype');
     font-weight: 400;
@@ -30,39 +31,39 @@
 
 
 /*Geral*/
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-body{
+body {
     background-color: var(--bg-color);
     color: var(--black);
 }
 
-h1{
+h1 {
     font-size: 17px;
-    
+
 }
 
-p{
+p {
     font-family: 'Helvetica-Neue', sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 14px;
 }
 
-.bold{
+.bold {
     font-family: 'Helvetica-Neue-Bold', sans-serif;
     font-weight: 600;
     font-weight: bold;
 }
 
-.medium{
+.medium {
     font-family: 'Helvetica-Neue-Medium', sans-serif;
 }
 
-.grid{
+.grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: calc(var(--marginDesktop));
@@ -75,17 +76,22 @@ header {
     justify-content: space-between;
     margin: 0 var(--marginDesktop);
     position: absolute;
-    top:0;
+    top: 0;
     width: calc(100vw - var(--marginDesktop)* 2);
+}
+
+.headerFlag svg{
+    width: 4.5vw;
+    height: auto;
 }
 
 
 /*Index*/
-.mainIndex{
+.mainIndex {
     height: calc(var(--vh, 1h)* 100);
 }
 
-.background-index img{
+.background-index img {
     width: 100vw;
     height: calc(var(--vh, 1h)* 100);
     object-fit: cover;
@@ -95,7 +101,7 @@ header {
 }
 
 
-.background-index svg{
+.background-index svg {
     width: 100vw;
     height: calc(var(--vh, 1h)* 100);
     position: absolute;
@@ -104,23 +110,57 @@ header {
 }
 
 /*Footer*/
-footer p .bold{
+footer{
+    margin: var(--marginDesktop);
+}
+footer p .bold {
     font-weight: 300;
 }
 
-footer p{
+footer p {
     line-height: 20px;
 }
 
-footer div:first-child{
+footer div:first-child {
     grid-column: 2 / span 2;
 }
 
-footer div{
+footer div {
     grid-column: span 2;
     margin: calc(var(--marginDesktop) * 2) 0;
 }
 
-footer h1{
+footer h1 {
     margin-bottom: 1rem;
+}
+
+
+
+
+@media only screen and (max-width: 700px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: calc(var(--marginDesktop));
+    }
+
+    /*Header*/
+    .headerFlag svg{
+        width: 13vw;
+    }
+
+    /*Footer*/
+    footer div:first-child {
+        grid-column: 1 / span 3;
+    }
+
+    footer div {
+        grid-column: span 3;
+        margin: calc(var(--marginMobile));
+    }
+
+    footer h1 {
+        margin-bottom: 1rem;
+    }
+
 }
