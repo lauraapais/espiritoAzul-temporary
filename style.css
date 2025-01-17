@@ -80,6 +80,10 @@ header {
     width: calc(100vw - var(--marginDesktop)* 2);
 }
 
+.headerFlag{
+    display: flex;
+}
+
 .headerFlag svg {
     width: 4.5vw;
     height: auto;
@@ -93,6 +97,16 @@ header {
     height: calc(var(--vh, 1h)* 100);
 }
 
+.gapIndex{
+    width:10%;
+}
+
+.background-index {
+    position: relative; /* Add this line to create a positioning context */
+    width: 100vw;
+    height: calc(var(--vh, 1h) * 100);
+}
+
 .background-index img {
     width: 100vw;
     height: calc(var(--vh, 1h) * 100);
@@ -102,22 +116,22 @@ header {
     z-index: -1;
 }
 
-.gapIndex{
-    width:10vw;
+.backgroundsvg-index {
+    display: flex;
+    width: 100vw;
+    height: calc(var(--vh, 1h) * 100);
+    justify-content: center;
+    position: absolute; /* Ensures it's positioned absolutely within .background-index */
+    top: 0;
+    z-index: 0; /* Ensure it sits above the background image */
 }
 
 .backgroundsvg-index svg {
     width: auto;
     height: calc(var(--vh, 1h) * 90);
-
 }
 
-.backgroundsvg-index {
-    display: flex;
-        width: 100vw;
-        height: calc(var(--vh, 1h)* 100);
-        justify-content: center;
-}
+
 
 /*Footer*/
 footer{
